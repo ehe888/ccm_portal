@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  div(class="container wrapper")
+    div(class="wrapper center-block" style="padding-top: 48px; width: 400px;")
+      form(id="registerForm")
+        <!-- progressbar -->
+        ul(id="progressbar")
+          li(class="active") 登录账户设置
+          li 组织机构设置
+          li 联系信息
+        
+        <!-- fieldsets -->
+        fieldset(class="form-group")
+          h2(class="fs-title") 企业账户的登录信息
+          input(type="email" class="form-control" id="email" name="email" placeholder="电子邮箱")
+          input(type="password" class="form-control" id="password" name="password" placeholder="请输入密码")
+          input(type="password" class="form-control" id="rePassword" name="rePassword" placeholder="再次输入密码")
+          input(type="button" class="next action-button" value="下一步")
+        fieldset(class="form-group")
+          h2(class="fs-title") 企业的基本信息
+          input(type="text" class="form-control" id="name" name="name" placeholder="公司代码")
+          input(type="text" class="form-control" id="fullName" name="fullName" placeholder="全称")
+          input(type="button" class="previous action-button" value="上一步")
+          input(type="button" class="next action-button" value="下一步")
+        fieldset(class="form-group")
+          h2(class="fs-title") 企业的联系人信息
+          input(type="text" class="form-control" id="lastName" name="lastName" placeholder="联系人姓氏")
+          input(type="text" class="form-control" id="firstName" name="firstName" placeholder="联系人名字")
+          input(type="mobile" class="form-control" id="mobile" name="mobile" placeholder="手机号码")
+          input(type="button" class="previous action-button" value="上一步")
+          input(type="submit" name="submit" class="submit action-button" value="提交")
+        
+  
+  
