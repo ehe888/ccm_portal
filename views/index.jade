@@ -3,7 +3,13 @@ extends layout
 block content
   div(class="container wrapper")
     div(class="wrapper center-block" style="padding-top: 48px; width: 400px;")
-      form(id="registerForm")
+      div(class="title")
+        h2(style="color:#FFF;text-align:center") 帐号注册系统
+      div(class="login_div" style="")
+        input(type="text" class="loginid form-control" placeholder="用户名" style="display:block;margin-bottom:15px;margin-top:30px;")
+        input(type="password" class="loginpwd form-control" placeholder="密码" style="display:block;margin-bottom:30px")
+        input(type="button" class="login" value="登录" style="width:100%;height:40px;background:#35cca7;color:#FFF;border:1px solid #35cca7;border-radius:3px;")
+      form(id="registerForm" style="display:none;margin-top:35px;")
         <!-- progressbar -->
         ul(id="progressbar")
           li(class="active") 登录账户设置
@@ -25,11 +31,8 @@ block content
           input(type="button" class="next action-button" value="下一步")
         fieldset(class="form-group")
           h2(class="fs-title") 企业的联系人信息
-          input(type="text" class="form-control" id="lastName" name="lastName" placeholder="联系人姓氏")
-          input(type="text" class="form-control" id="firstName" name="firstName" placeholder="联系人名字")
+          input(type="text" class="form-control" id="firstName" name="firstName" placeholder="联系人姓氏")
+          input(type="text" class="form-control" id="lastName" name="lastName" placeholder="联系人名字")
           input(type="mobile" class="form-control" id="mobile" name="mobile" placeholder="手机号码")
           input(type="button" class="previous action-button" value="上一步")
           input(type="submit" name="submit" class="submit action-button" value="提交")
-        
-  
-  
