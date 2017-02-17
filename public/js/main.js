@@ -1,6 +1,6 @@
 $(function(){
 
-	var dn = 'http://localhost:3000'
+	var dn = 'http://ccmauth.aivics.net'
 
 	var access_token
 	var cookie_access_token = $.cookie('access_token')
