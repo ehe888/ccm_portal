@@ -57,7 +57,7 @@ $(function(){
 							url:dn + '/identity/oauth2admin/token',
 							type:'post',
 							headers:{'X-Authub-Account':"authub_master"},
-							data:{client_id: '58a6a475132a9806a4f8ed55',client_secret: 'aC6PIizYOc3DpkpqgX8z7WzkwbS5UVHE',grant_type: 'client_credential'}
+							data:{client_id: '5744030526d22a65441664a9',client_secret: '36F4nZUR6RgKA5ltzsjlnLlk1idUkoGRLiHbzVvptyyIgSkhbYs3708DEUlSfsYW',grant_type: 'client_credential'}
 						})
 						.success(function(res){
 							access_token = res.access_token
