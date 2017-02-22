@@ -1,6 +1,9 @@
 $(function(){
 
-	var dn = 'http://ccmauth.aivics.net'
+	//var dn = 'http://ccmauth.aivics.net'
+	var dn = 'http://localhost:3000'
+	var secret = 'aC6PIizYOc3DpkpqgX8z7WzkwbS5UVHE'
+	var id = '58a6a475132a9806a4f8ed55'
 
 	var access_token
 	var cookie_access_token = $.cookie('access_token')
@@ -57,7 +60,8 @@ $(function(){
 							url:dn + '/identity/oauth2admin/token',
 							type:'post',
 							headers:{'X-Authub-Account':"authub_master"},
-							data:{client_id: '5744030526d22a65441664a9',client_secret: '36F4nZUR6RgKA5ltzsjlnLlk1idUkoGRLiHbzVvptyyIgSkhbYs3708DEUlSfsYW',grant_type: 'client_credential'}
+							data:{client_secret:secret,client_id:id,grant_type: 'client_credential'}
+							//data:{client_id: '5744030526d22a65441664a9',client_secret: '36F4nZUR6RgKA5ltzsjlnLlk1idUkoGRLiHbzVvptyyIgSkhbYs3708DEUlSfsYW',grant_type: 'client_credential'}
 						})
 						.success(function(res){
 							access_token = res.access_token
@@ -146,7 +150,7 @@ $(function(){
 							url:dn + '/identity/oauth2admin/sendMail',
 							type:'post',
 							headers:{'X-Authub-Account':"authub_master",'Authorization':"Bearer " + access_token},
-							data:{subject:'来自fastccm帐号注册',html:'验证码：'+veri_code}
+							data:{subject:'来自fastccm帐号注册',html:'验证码：'+veri_code,email:email}
 						})
 						
 					}
@@ -158,3 +162,4 @@ $(function(){
 	})
 
 })
+
